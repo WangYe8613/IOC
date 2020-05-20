@@ -1,12 +1,9 @@
 package org.wy.ioc.pojo;
 
-public class Producer extends Person {
+import org.springframework.stereotype.Service;
 
-    // spring可以用每个类的构造函数来创建该类对象，但是我们选择另一种更常用的方式：getter()和setter()
-//    public Producer(String name, String age){
-//        this.name = name;
-//        this.age = age;
-//    }
+@Service("Producer") // 将Producer存入Spring IOC容器中，id设为Producer
+public class Producer extends Person {
 
     @Override
     public void work() {
