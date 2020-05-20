@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns= "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 从这里开始设置bean -->
+
+    <!-- 设置完TransactionService，main函数里就不需要在new TransactionServiceImpl()-->
+    <bean id="TransactionService" class="org.wy.ioc.service.TransactionServiceImpl">
+        <!-- 这里直接使用下面设置的bean作为成员 -->
+        <property name="Consumer" ref="Consumer"></property>
+        <property name="Producer" ref="Producer"></property>
+    </bean>
+
+    <!-- 设置完Consumer，TransactionServiceImpl里就不需要在new Consumer()-->
+    <bean id="Consumer" class="org.wy.ioc.pojo.Consumer">
+        <property name="name" value="王也"></property>
+        <property name="age" value="24"></property>
+        <property name="balance" value="3"></property>
+    </bean>
+
+    <!-- 设置完Producer，TransactionServiceImpl里就不需要在new Producer()-->
+    <bean id="Producer" class="org.wy.ioc.pojo.Producer">
+        <property name="name" value="老板"></property>
+        <property name="age" value="30"></property>
+    </bean>
+
+</beans>

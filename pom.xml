@@ -19,6 +19,16 @@
                 </configuration>
             </plugin>
         </plugins>
+
+        <!-- 设置配置文件读取路径 -->
+        <resources>
+            <resource>
+                <directory>conf/springConfigXml</directory>
+                <includes>
+                    <include>*.xml</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
     <packaging>jar</packaging>
 
@@ -30,5 +40,4 @@
             <version>5.1.7.RELEASE</version>
         </dependency>
     </dependencies>
-
 </project>
