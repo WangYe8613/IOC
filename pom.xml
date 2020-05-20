@@ -20,15 +20,16 @@
             </plugin>
         </plugins>
 
-        <!-- 设置配置文件读取路径 -->
-        <resources>
-            <resource>
-                <directory>conf/springConfigXml</directory>
-                <includes>
-                    <include>*.xml</include>
-                </includes>
-            </resource>
-        </resources>
+<!-- 使用纯注解方式实现Spring IOC机制的话，就不需要xml配置文件了，这也就不需要设置了 -->
+<!--        &lt;!&ndash; 设置配置文件读取路径 &ndash;&gt;-->
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                <directory>conf/springConfigXml</directory>-->
+<!--                <includes>-->
+<!--                    <include>*.xml</include>-->
+<!--                </includes>-->
+<!--            </resource>-->
+<!--        </resources>-->
     </build>
     <packaging>jar</packaging>
 
