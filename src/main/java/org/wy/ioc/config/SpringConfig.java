@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Import;
  *
  * 继续学习三个新的注解：
  * ①@Configuration
- *      作用：制定一个类作为配置类
+ *      作用：指定一个类作为配置类
  *
  * ②@ComponentScan
  *      作用：用于"指定Spring创建IOC容器时要扫描的包在"

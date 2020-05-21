@@ -30,6 +30,16 @@
 <!--                </includes>-->
 <!--            </resource>-->
 <!--        </resources>-->
+
+        <!-- 设置properties配置文件读取路径 -->
+        <resources>
+            <resource>
+                <directory>properties</directory>
+                <includes>
+                    <include>*.properties</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
     <packaging>jar</packaging>
 
@@ -39,6 +49,13 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>5.1.7.RELEASE</version>
+        </dependency>
+
+        <!-- 添加HikariCP数据库连接池依赖 -->
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>2.7.1</version>
         </dependency>
     </dependencies>
 </project>
